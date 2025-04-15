@@ -40,18 +40,18 @@
     <button class="four-btn">Tech</button>
   </section>
 
-  <script>
+ <script>
     let btnArray = document.querySelectorAll('button')
 
     for (let i = 0; i < btnArray.length; i++) {
-      function toggle() {
+
+      btnArray[i].addEventListener('click', function () {
         if (btnArray[i].classList.contains('is-toggled')) {
           btnArray[i].classList.remove('is-toggled')
         } else {
           btnArray[i].classList.add('is-toggled')
         }
-      }
-      btnArray[i].addEventListener('click', toggle)
+      })
     }
   </script>
 </body>
