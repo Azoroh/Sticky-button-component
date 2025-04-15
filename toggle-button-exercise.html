@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,13 +26,10 @@
     .is-toggled {
       background-color: black;
       color: white;
-
     }
   </style>
 </head>
-
 <body>
-
   <section>
     <button class="first-btn">Gaming</button>
   </section>
@@ -45,14 +41,6 @@
   </section>
 
   <script>
-    // const btn1 = document.querySelector('.first-btn')
-    // const btn2 = document.querySelector('.second-btn')
-    // const btn3 = document.querySelector('.third-btn')
-    // const btn4 = document.querySelector('.four-btn')
-
-    // let buttons = 
-    // console.log(buttons);
-
     let btnArray = document.querySelectorAll('button')
 
     for (let i = 0; i < btnArray.length; i++) {
@@ -63,18 +51,8 @@
           btnArray[i].classList.add('is-toggled')
         }
       }
-
       btnArray[i].addEventListener('click', toggle)
-
-
     }
-
-
-
-
-    // button.addEventListener('click', toggle)
-
-
   </script>
 </body>
 
