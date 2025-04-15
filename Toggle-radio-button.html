@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle Buttons</title>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    section {
+      margin-top: 50px;
+    }
+
+    button {
+      background-color: #d5d5d5;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+    }
+
+    .is-toggled {
+      background-color: black;
+      color: white;
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <section>
+    <button class="second-btn">Gaming</button>
+    <button class="third-btn">Music</button>
+    <button class="four-btn">Tech</button>
+  </section>
+
+  <script>
+    let btnArray = document.querySelectorAll('button')
+
+    for (let i = 0; i < btnArray.length; i++) {
+
+      btnArray[i].addEventListener('click', function () {
+
+        const wasToggled = this.classList.contains('is-toggled')
+
+        for (let j = 0; j < btnArray.length; j++) {
+          btnArray[j].classList.remove('is-toggled')
+        }
+
+        if (!wasToggled) {
+          this.classList.add('is-toggled')
+        }
+
+
+        // if (btnArray[i].classList.contains('is-toggled')) {
+        //   btnArray[i].classList.remove('is-toggled')
+        // } else {
+        //   btnArray[i].classList.add('is-toggled')
+        // }
+      })
+    }
+  </script>
+</body>
+
+</html>
